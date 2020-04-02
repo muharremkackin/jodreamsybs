@@ -1,9 +1,9 @@
 <template>
     <div class="flex">
-        <div class="h-screen overflow-y-auto border-r bg-white" :class="SidebarWidthClass">
+        <div class="h-screen overflow-y-auto border-r bg-white transition-all duration-500 linear" :class="SidebarWidthClass">
             <div class="h-16 border-b flex items-center justify-between">
                 <span class="text-2xl font-bold text-gray-800 pl-4" :class="SidebarTextClass">Yönetim Paneli</span>
-                <button @click="sidebar.expand = !sidebar.expand" class=" h-full w-16 flex items-center justify-center border-l">
+                <button @click="sidebar.expand = !sidebar.expand" class=" h-full w-16 flex items-center justify-center border-l focus:outline-none hover:bg-gray-200 active:bg-gray-300 transition-all duration-300 ease-in-out">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -13,7 +13,7 @@
                 </button>
             </div>
             <div class="flex flex-col">
-                <router-link to="/dashboard/hr/" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">İnsan Kaynakları</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="512" viewBox="0 0 60 41" width="512" xmlns="http://www.w3.org/2000/svg">
@@ -50,24 +50,24 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/development/home" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/development/home" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">Yazılım Geliştirme</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" id="Layer_1" enable-background="new 0 0 512.015 512.015" height="512" viewBox="0 0 512.015 512.015" width="512"
                              xmlns="http://www.w3.org/2000/svg">
-    <g>
-        <g>
-            <path d="m458.09 39.975h-129.674l-5.164-19.273c-1.925-7.185-6.549-13.199-13.02-16.936-6.472-3.736-13.993-4.732-21.176-2.808l-242.351 64.937c-7.186 1.925-13.2 6.549-16.936 13.021-3.736 6.471-4.733 13.992-2.808 21.177l104.829 391.223c3.338 12.46 14.648 20.698 26.977 20.698 2.386 0 4.81-.309 7.22-.955l38.605-10.344c.866.081 1.734.127 2.599.127h250.9c15.396 0 27.921-12.525 27.921-27.921v-405.025c-.001-15.396-12.526-27.921-27.922-27.921zm-297.28 451.767c-4.216 1.129-8.571-1.381-9.702-5.602l-104.828-391.225c-.543-2.024-.255-4.156.81-6s2.767-3.159 4.791-3.701l242.352-64.938c2.025-.54 4.155-.255 6 .811 1.844 1.064 3.158 2.766 3.701 4.791l40.766 152.137c1.43 5.334 6.916 8.503 12.247 7.071 5.335-1.429 8.501-6.913 7.071-12.248l-16.844-62.863h68.838v256.91l-28.696-107.098c-1.429-5.335-6.915-8.503-12.247-7.071-5.335 1.429-8.501 6.913-7.071 12.248l40.765 152.14c.543 2.024.255 4.155-.81 5.999-1.064 1.845-2.767 3.159-4.791 3.702zm305.201-18.82c0 4.368-3.554 7.921-7.921 7.921h-179.332l111.963-30h35.291c5.522 0 10-4.477 10-10v-340.868c0-5.523-4.478-10-10-10h-84.198l-8.039-30h124.315c4.367 0 7.921 3.554 7.921 7.921z"/>
-            <path d="m272.514 188.749c-11.113-6.417-24.063-8.121-36.454-4.799-9.399 2.519-17.628 7.699-23.854 14.901-8.995-3.125-18.711-3.495-28.11-.977-12.395 3.321-22.755 11.271-29.17 22.383-13.245 22.94-5.356 52.38 17.584 65.625l57.652 33.286c3.064 1.769 6.415 2.609 9.723 2.609 6.748 0 13.319-3.499 16.929-9.751l33.285-57.653c6.416-11.113 8.121-24.059 4.8-36.454s-11.271-22.754-22.385-29.17zm.264 55.625-33.04 57.229-57.229-33.041c-13.39-7.731-17.994-24.915-10.264-38.305 3.745-6.486 9.792-11.126 17.026-13.065 2.416-.647 4.867-.967 7.304-.967 4.858 0 9.654 1.274 13.975 3.769 2.297 1.327 5.028 1.685 7.589.999 2.562-.687 4.745-2.362 6.071-4.66 3.745-6.486 9.791-11.126 17.026-13.064s14.792-.943 21.277 2.801c6.486 3.745 11.127 9.792 13.065 17.027s.945 14.79-2.8 21.277z"/>
-            <path d="m78.232 98.861-.007.002c-5.311 1.517-8.382 7.051-6.865 12.361 1.256 4.393 5.261 7.255 9.613 7.255.91 0 1.835-.125 2.753-.388 5.311-1.517 8.386-7.052 6.868-12.362-1.516-5.31-7.051-8.385-12.362-6.868z"/>
-            <path d="m371.322 393.924-.007.002c-5.311 1.517-8.382 7.051-6.865 12.361 1.256 4.393 5.261 7.255 9.613 7.255.91 0 1.835-.125 2.753-.388 5.311-1.517 8.386-7.052 6.868-12.362-1.516-5.31-7.051-8.383-12.362-6.868z"/>
-            <path d="m376.007 218.902c0-5.523-4.478-10-10-10h-.007c-5.522 0-9.996 4.477-9.996 10s4.481 10 10.004 10 9.999-4.477 9.999-10z"/>
-        </g>
-    </g>
-</svg>
+                            <g>
+                                <g>
+                                    <path d="m458.09 39.975h-129.674l-5.164-19.273c-1.925-7.185-6.549-13.199-13.02-16.936-6.472-3.736-13.993-4.732-21.176-2.808l-242.351 64.937c-7.186 1.925-13.2 6.549-16.936 13.021-3.736 6.471-4.733 13.992-2.808 21.177l104.829 391.223c3.338 12.46 14.648 20.698 26.977 20.698 2.386 0 4.81-.309 7.22-.955l38.605-10.344c.866.081 1.734.127 2.599.127h250.9c15.396 0 27.921-12.525 27.921-27.921v-405.025c-.001-15.396-12.526-27.921-27.922-27.921zm-297.28 451.767c-4.216 1.129-8.571-1.381-9.702-5.602l-104.828-391.225c-.543-2.024-.255-4.156.81-6s2.767-3.159 4.791-3.701l242.352-64.938c2.025-.54 4.155-.255 6 .811 1.844 1.064 3.158 2.766 3.701 4.791l40.766 152.137c1.43 5.334 6.916 8.503 12.247 7.071 5.335-1.429 8.501-6.913 7.071-12.248l-16.844-62.863h68.838v256.91l-28.696-107.098c-1.429-5.335-6.915-8.503-12.247-7.071-5.335 1.429-8.501 6.913-7.071 12.248l40.765 152.14c.543 2.024.255 4.155-.81 5.999-1.064 1.845-2.767 3.159-4.791 3.702zm305.201-18.82c0 4.368-3.554 7.921-7.921 7.921h-179.332l111.963-30h35.291c5.522 0 10-4.477 10-10v-340.868c0-5.523-4.478-10-10-10h-84.198l-8.039-30h124.315c4.367 0 7.921 3.554 7.921 7.921z"/>
+                                    <path d="m272.514 188.749c-11.113-6.417-24.063-8.121-36.454-4.799-9.399 2.519-17.628 7.699-23.854 14.901-8.995-3.125-18.711-3.495-28.11-.977-12.395 3.321-22.755 11.271-29.17 22.383-13.245 22.94-5.356 52.38 17.584 65.625l57.652 33.286c3.064 1.769 6.415 2.609 9.723 2.609 6.748 0 13.319-3.499 16.929-9.751l33.285-57.653c6.416-11.113 8.121-24.059 4.8-36.454s-11.271-22.754-22.385-29.17zm.264 55.625-33.04 57.229-57.229-33.041c-13.39-7.731-17.994-24.915-10.264-38.305 3.745-6.486 9.792-11.126 17.026-13.065 2.416-.647 4.867-.967 7.304-.967 4.858 0 9.654 1.274 13.975 3.769 2.297 1.327 5.028 1.685 7.589.999 2.562-.687 4.745-2.362 6.071-4.66 3.745-6.486 9.791-11.126 17.026-13.064s14.792-.943 21.277 2.801c6.486 3.745 11.127 9.792 13.065 17.027s.945 14.79-2.8 21.277z"/>
+                                    <path d="m78.232 98.861-.007.002c-5.311 1.517-8.382 7.051-6.865 12.361 1.256 4.393 5.261 7.255 9.613 7.255.91 0 1.835-.125 2.753-.388 5.311-1.517 8.386-7.052 6.868-12.362-1.516-5.31-7.051-8.385-12.362-6.868z"/>
+                                    <path d="m371.322 393.924-.007.002c-5.311 1.517-8.382 7.051-6.865 12.361 1.256 4.393 5.261 7.255 9.613 7.255.91 0 1.835-.125 2.753-.388 5.311-1.517 8.386-7.052 6.868-12.362-1.516-5.31-7.051-8.383-12.362-6.868z"/>
+                                    <path d="m376.007 218.902c0-5.523-4.478-10-10-10h-.007c-5.522 0-9.996 4.477-9.996 10s4.481 10 10.004 10 9.999-4.477 9.999-10z"/>
+                                </g>
+                            </g>
+                        </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/police-registration/home" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/police-registration/home" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">Polis Kaydı</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="496pt" viewBox="0 0 496 496" width="496pt" xmlns="http://www.w3.org/2000/svg">

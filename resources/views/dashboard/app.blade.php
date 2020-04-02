@@ -17,6 +17,14 @@
 <div id="app">
     <App></App>
 </div>
+<script>
+    @auth
+        window.Permissions = {!! json_encode(\Illuminate\Support\Facades\Auth::user()->getAllPermissions, true) !!};
+    @else
+        window.Permissions = [];
+    @endauth
+    console.log(window.Permissions);
+</script>
 <script src="{{ mix('assets/dashboard/js/app.js') }}"></script>
 </body>
 </html>

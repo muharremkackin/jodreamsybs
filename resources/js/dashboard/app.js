@@ -8,13 +8,17 @@ require('./bootstrap');
 
 import Vue from 'vue';
 import App from "./views/App";
+import axios from 'axios';
 import router from "./routes";
 import store from "./store";
+import Permissions from "./mixins/Permissions";
+Vue.mixin(Permissions);
 
-Vue.prototype.$http = window.axios;
+Vue.prototype.$http = axios;
 const token = localStorage.getItem('token');
+
 if (token) {
-    Vue.prototype.$http.defaults.headers.common['Authorization'] = token;
+    Vue.prototype.$http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 }
 
 /**

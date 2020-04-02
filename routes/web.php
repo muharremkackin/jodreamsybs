@@ -13,5 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard/{any?}', 'AppController@dashboard')->where('any', '.*')->name('dashboard.app');
-Route::get('/{any?}', 'AppController@website')->where('any', '.*')->name('website.app');
+Route::domain(env('APP_DASHBOARD_URL'))->group(function () {
+    Route::get('/{any?}', 'AppController@dashboard')->where('any', '.*')->name('dashboard.app');
+});
+
+Route::domain(env('APP_URL'))->group(function () {
+    Route::get('/{any?}', 'AppController@website')->where('any', '.*')->name('website.app');
+});

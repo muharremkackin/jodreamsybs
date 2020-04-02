@@ -2,7 +2,7 @@
     <div class="h-full flex items-center relative ">
         <button @click.prevent="showProfileModal" class="h-10 w-56 flex items-center justify-between focus:outline-none active:bg-gray-400 hover:bg-gray-300 focus:bg-gray-400 transition-all duration-300 ease-in-out rounded">
             <img class="w-8 h-8 rounded-full ml-2" src="https://via.placeholder.com/150" alt="">
-            <span>John Evelyn Doe</span>
+            <span v-html="profile.name"></span>
             <span class="mr-2">
                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -31,7 +31,9 @@
         data() {
             return {
                 profile: {
-                    show: false
+                    show: false,
+                    name: '',
+                    id: null,
                 }
             }
         },
@@ -42,14 +44,25 @@
             logout: function () {
                 this.$store.dispatch('logout')
                 .then(() => {
-                    this.$router.push('/dashboard/login')
+                    this.$router.push('/login')
                 })
-            }
+            },
+
         },
         computed: {
             isLoggedIn: function () {
                 return this.$store.getters.isLoggedIn
             }
+        },
+        created() {
+            this.$http({url: '/details', method: 'GET'})
+                .then((response => {
+                    this.profile.name = response.data.data.name;
+                    this.profile.id = response.data.data.id;
+                }))
+                .catch(error => {
+                    console.log(error);
+                })
         }
     }
 </script>

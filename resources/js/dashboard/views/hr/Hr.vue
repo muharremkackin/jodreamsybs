@@ -2,7 +2,7 @@
     <div class="flex">
         <div class="h-screen overflow-y-auto border-r bg-white" :class="SidebarWidthClass">
             <div class="h-16 border-b flex items-center justify-between w-full">
-                <router-link to="/dashboard/" class="flex items-center text-2xl font-bold text-gray-800 pl-4 focus:outline-none hover:text-gray-700 focus:text-gray-800 h-12 " :class="SidebarTextClass">
+                <router-link to="/" class="flex items-center text-2xl font-bold text-gray-800 pl-4 focus:outline-none hover:text-gray-700 focus:text-gray-800 h-12 " :class="SidebarTextClass">
                     <span>
                         <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -14,7 +14,7 @@
                         Yönetim Paneli
                     </span>
                 </router-link>
-                <button @click="sidebar.expand = !sidebar.expand" class=" h-full w-16 flex items-center justify-center border-l">
+                <button @click="sidebar.expand = !sidebar.expand" class=" h-full w-16 flex items-center justify-center border-l focus:outline-none hover:bg-gray-200 active:bg-gray-300 transition-all duration-300 ease-in-out">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -24,7 +24,7 @@
                 </button>
             </div>
             <div class="flex flex-col">
-                <router-link to="/dashboard/hr/" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">İnsan Kaynakları</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="512" viewBox="0 0 60 41" width="512" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/hr/personals" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/personals" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">Personeller</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="512" viewBox="0 0 60 41" width="512" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/hr/departments" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/departments" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">Departmanlar</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" id="Layer_1" enable-background="new 0 0 512.015 512.015" height="512" viewBox="0 0 512.015 512.015" width="512"
@@ -115,7 +115,7 @@
 </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/hr/leaves" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/leaves" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">İzinler</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="496pt" viewBox="0 0 496 496" width="496pt" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +136,7 @@
                         </svg>
                     </span>
                 </router-link>
-                <router-link to="/dashboard/hr/payrolls" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
+                <router-link to="/hr/payrolls" class="flex items-center justify-between border-b hover:bg-gray-300 focus:bg-gray-500 focus:outline-none transition-all duration-300 ease-in-out">
                     <span :class="SidebarTextClass" class="text-lg py-2 px-4">Maaşlar</span>
                     <span class="h-16 w-16 flex items-center justify-center border-l">
                         <svg class="w-8 h-8" height="496pt" viewBox="0 0 496 496" width="496pt" xmlns="http://www.w3.org/2000/svg">

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a79dc66-c883-4620-921d-708e0770433c" name="Default Changelist" comment="" />
+    <list default="true" id="0a79dc66-c883-4620-921d-708e0770433c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/modals/PersonalAdd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/dashboard/mixins/Permissions.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/dashboard/views/system/Permissions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Personal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_01_221316_create_personals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_01_221316_create_personals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/dashboard/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dashboard/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/components/ProfileDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/components/ProfileDropdown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Hr.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Hr.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +34,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -20,6 +55,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -138,6 +176,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Zwrv7s75d31Jo7PaBA9SPvX5FI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -145,6 +184,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/database/factories" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -152,6 +192,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\jodreams\resources\js\dashboard" />
       <recent name="D:\Projects\jodreams\resources\js\dashboard\components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -188,7 +229,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585761224230</updated>
-      <workItem from="1585761227587" duration="22279000" />
+      <workItem from="1585761227587" duration="34933000" />
     </task>
     <servers />
   </component>
@@ -216,9 +257,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585763027956" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585793860465">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585815306394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585793860465" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585815306394" />
   </component>
 </project>

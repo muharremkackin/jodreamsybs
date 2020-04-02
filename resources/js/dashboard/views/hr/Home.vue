@@ -3,8 +3,8 @@
     <div class="h-screen-without-16 overflow-y-auto pb-16">
         <div class="h-20 bg-white w-full flex items-center justify-between">
             <h1 class="ml-8 text-3xl font-bold">İnsan Kaynakları</h1>
-            <div>
-                <button
+            <div class="relative">
+                <button @click="dropdowns.create.show = !dropdowns.create.show"
                     class="h-10 flex px-4 mr-8 items-center text-green-800 bg-green-400 rounded hover:bg-green-500 focus:bg-green-600 focus:text-green-900 focus:outline-none transition-all duration-300 ease-in-out">
                 <span>
                     <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -26,6 +26,11 @@
                     </svg>
                 </span>
                 </button>
+                <div v-if="dropdowns.create.show" class="absolute right-0 mr-8 rounded shadow-lg">
+                    <button @click="modals.personal.show = true" class="py-2 px-2 bg-white w-full text-left hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-300 transition-all duration-300 ease-in-out  border-b">Personel</button>
+                    <button class="py-2 px-2 bg-white w-full text-left hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-300 transition-all duration-300 ease-in-out  border-b">Günlük İzin</button>
+                    <button class="py-2 px-2 bg-white w-full text-left hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-300 transition-all duration-300 ease-in-out ">Saatlik İzin</button>
+                </div>
             </div>
         </div>
         <div>
@@ -430,17 +435,93 @@
                 </div>
             </div>
         </div>
+        <transition v-if="modals.personal.show">
+            <div>
+                <div class="fixed top-0 left-0 right-0 bottom-0 bg-black opacity-25"></div>
+                <div class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+                    <div class="w-10/12 bg-white rounded">
+                        <div class="flex items-center justify-between pl-4 border-b ">
+                            <h3 class="font-bold text-xl">Personel Ekle</h3>
+                            <button @click="modals.personal.show=false" class="px-4 font-bold text-xl py-1">&times;</button>
+                        </div>
+                        <div class="px-4 py-4">
+                            <form action="" >
+                                <div class="flex flex-wrap">
+                                    <div class="w-1/3 flex flex-col pr-2">
+                                        <label class="text-sm font-semibold" for="name">Name</label>
+                                        <input class="py-1 px-4 border border-b-2 border-gray-400 rounded" type="text" id="name" v-model="modals.personal.person.name">
+                                    </div>
+                                    <div class="w-1/3 flex flex-col px-2">
+                                        <label class="text-sm font-semibold" for="email">Email</label>
+                                        <input class="py-1 px-4 border border-b-2 border-gray-400 rounded" type="email" id="email" v-model="modals.personal.person.email">
+                                    </div>
+                                    <div class="w-1/3 flex flex-col pl-2">
+                                        <label class="text-sm font-semibold" for="password">Password</label>
+                                        <input class="py-1 px-4 border border-b-2 border-gray-400 rounded" type="password" id="password" v-model="modals.personal.person.password">
+                                    </div>
+                                    <div class="w-1/3 flex flex-col pl-2">
+                                        <label class="text-sm font-semibold" for="password">Password</label>
+                                        <select name="" id=""></select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </div>
 
 </template>
 
 <script>
+    import PersonalAdd from "../../../components/modals/PersonalAdd";
     export default {
         name: "Home",
+        components: {PersonalAdd},
         data() {
-            return {}
+            return {
+                modals: {
+                    personal: {
+                        show: false,
+                        person: {
+                            department_id: null,
+                            position_id: null,
+                            name: '',
+                            email: '',
+                            password: '',
+                            started_at: '',
+                            payroll: '',
+                        }
+                    },
+                    leave: {
+                        show: false,
+                        data: {
+                            leave_id: null,
+                            person_id: null,
+                            started_at: '',
+                            finished_at: '',
+                        }
+                    },
+                    hourly: {
+                        show: false,
+                        data: {
+                            person_id: null,
+                            started_at: '',
+                            finished_at: '',
+                        }
+                    },
+                },
+                dropdowns: {
+                    create: {
+                        show: false
+                    },
+                },
+            }
         },
-        methods: {},
+        methods: {
+
+        },
         computed: {}
     }
 </script>

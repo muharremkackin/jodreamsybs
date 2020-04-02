@@ -18,7 +18,7 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/dashboard/',
+            path: '/',
             name: 'dashboard.home',
             component: DashboardHome,
             meta: {
@@ -26,7 +26,7 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/dashboard/login',
+            path: '/login',
             name: 'dashboard.login',
             component: DashboardLogin,
             meta: {
@@ -34,7 +34,7 @@ const router = new VueRouter({
             }
         },
         {
-            path: '/dashboard/hr/',
+            path: '/hr/',
             name: 'dashboard.hr.home',
             component: Hr,
             meta: {
@@ -49,7 +49,7 @@ const router = new VueRouter({
             ]
         },
         {
-            path: '/dashboard/*',
+            path: '/*',
             name: 'dashboard.four-o-four',
             component: FourOFour
         }
@@ -62,14 +62,14 @@ router.beforeEach((to, from, next) => {
             next();
             return;
         }
-        next('dashboard/login');
+        next('login');
     }
     if (to.matched.some(record => record.meta.guest)) {
         if (!store.getters.isLoggedIn) {
             next();
             return;
         }
-        next('dashboard/');
+        next('/');
     } else {
         next()
     }
