@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a79dc66-c883-4620-921d-708e0770433c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/modals/PersonalAdd.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/dashboard/mixins/Permissions.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/dashboard/views/system/Permissions.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Hr/PersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Hr/PersonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Hr/Position.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Hr/Position.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Personal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_01_221316_create_personals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_01_221316_create_personals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DepartmentsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DepartmentsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PersonalsTableSeeder.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/dashboard/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/dashboard/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/components/ProfileDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/components/ProfileDropdown.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/dashboard/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/dashboard/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Hr.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/dashboard/views/hr/Hr.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -183,6 +192,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -212,7 +222,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="database.sqlite: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -229,7 +244,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585761224230</updated>
-      <workItem from="1585761227587" duration="34933000" />
+      <workItem from="1585761227587" duration="38439000" />
     </task>
     <servers />
   </component>
@@ -241,6 +256,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Composer/0.0.1366.728@0.0.1366.728" timestamp="1585763008032" />
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585818306500">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585818306500" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585780276894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -249,6 +268,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585782138102" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1585818302778">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585818302778" />
     <state x="517" y="283" key="NewPhpFileDialog" timestamp="1585779648226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -257,9 +280,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585763027956" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585815306394">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585818798792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585815306394" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585818798792" />
   </component>
 </project>

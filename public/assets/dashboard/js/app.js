@@ -45054,7 +45054,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
   state: {
     status: '',
     token: localStorage.getItem('token') || '',
-    user: {}
+    user: {},
+    permissions: localStorage.getItem('permissions') || ''
   },
   mutations: {
     auth_request: function auth_request(state) {
@@ -45085,7 +45086,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
         }).then(function (response) {
           var token = response.data.token;
           var user = response.data.user;
+          var permissions = response.data.permissions;
+          console.log(permissions);
           localStorage.setItem('token', token);
+          localStorage.setItem('permissions', permissions);
           axios__WEBPACK_IMPORTED_MODULE_2___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + token;
           commit('auth_success', token, user);
           resolve(response);

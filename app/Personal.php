@@ -9,8 +9,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Traits\HasPermissions;
 use Spatie\Permission\Traits\HasRoles;
 
 class Personal extends Authenticatable
@@ -23,7 +25,7 @@ class Personal extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'department_id', 'position_id', 'name', 'email', 'password',
     ];
 
     /**
@@ -58,5 +60,7 @@ class Personal extends Authenticatable
     {
         return $this->hasOne(Payroll::class);
     }
+
+
 
 }

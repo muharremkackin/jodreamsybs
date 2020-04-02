@@ -9,6 +9,9 @@ class Position extends Model
 {
     protected $table = 'hr_positions';
 
+    protected $guarded = [];
+
+
     public function department()
     {
         return $this->belongsTo(Department::class);

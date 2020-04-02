@@ -38,7 +38,7 @@ class DashboardController extends Controller
         if (!Hash::check($credentials['password'], $personal->password)) {
             return \response()->json(['password' => 'Hatalı şifre girdiniz.'], self::HTTP_UNAUTHORIZED);
         }
-        return \response()->json(['status' => 'success', 'token' => $personal->createToken('PersonalToken')->accessToken], self::HTTP_OK);
+        return \response()->json(['status' => 'success', 'token' => $personal->createToken('PersonalToken')->accessToken, 'permissions' => $personal->getPermissionNames()], self::HTTP_OK);
     }
 
     public function details() {

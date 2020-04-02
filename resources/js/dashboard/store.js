@@ -8,7 +8,8 @@ export default new Vuex.Store({
    state: {
        status: '',
        token: localStorage.getItem('token') || '',
-       user: {}
+       user: {},
+       permissions: localStorage.getItem('permissions') || '',
    },
     mutations: {
         auth_request(state){
@@ -35,7 +36,10 @@ export default new Vuex.Store({
                     .then(response => {
                         const token = response.data.token;
                         const user = response.data.user;
+                        const permissions = response.data.permissions;
+                        console.log(permissions);
                         localStorage.setItem('token', token);
+                        localStorage.setItem('permissions', permissions);
                         axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
                         commit('auth_success', token, user);
                         resolve(response);
